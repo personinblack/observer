@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'me.blackness.observer'
+version = '1.0.0'
+
+sourceCompatibility = '1.8'
+
+compileJava {
+    options.compilerArgs += ["-parameters"]
+    options.encoding = 'UTF-8'
+}
+
+test {
+	useJUnitPlatform()
+
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+
+	reports {
+        junitXml.enabled = false
+	}
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
+}
