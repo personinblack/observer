@@ -11,17 +11,17 @@ compileJava {
     options.encoding = 'UTF-8'
 }
 
-test {
-	useJUnitPlatform()
+// test {
+// 	useJUnitPlatform()
 
-	testLogging {
-		events "passed", "skipped", "failed"
-	}
+// 	testLogging {
+// 		events "passed", "skipped", "failed"
+// 	}
 
-	reports {
-        junitXml.enabled = false
-	}
-}
+// 	reports {
+//         junitXml.enabled = false
+// 	}
+// }
 
 repositories {
     mavenCentral()
