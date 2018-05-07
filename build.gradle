@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-group = 'me.blackness.observer'
+group = 'me.blackness'
 version = '1.0.0'
 
 sourceCompatibility = '1.8'
